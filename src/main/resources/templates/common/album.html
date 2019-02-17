@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>杜的个人博客</title>
+
+    <script src="js/jquery-2.1.4.min.js" th:src="@{/webjars/jquery/3.3.1-1/jquery.js}"></script>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" type="text/css"  th:href="@{/css/index.css}">
+    <link rel="stylesheet" type="text/css"  th:href="@{/css/style.css}">
+
+    <link rel="stylesheet" type="text/css"  th:href="@{/css/thumbnail-gallery.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{css/htmleaf-demo.css}">
+    <link rel="stylesheet" th:href="@{css/baguetteBox.min.css}">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet">
+    <link href="fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div th:replace="component/bar::blogheader(album)"></div>
+    <div class="container gallery-container">
+
+            <h1>时光纪念馆</h1>
+
+            <p class="page-description text-center">我的相册</p>
+            <div class="tz-gallery">
+
+                <div class="row">
+                    <h2 th:if="${albums.size()==0}">暂无相册</h2>
+                    <div class="col-sm-6 col-md-4" th:each="album:${albums}">
+                        <div class="thumbnail">
+                            <a class="lightbox" th:href="@{/album/}+${album.id}">
+                                <img src="" th:if="${album.photos.size()!=0}" th:src="${album.getCoverPath()==null}?${album.photos.get(0).getShowPath()}:${album.getCoverPath()}"  class="img-responsive center-block" >
+                                <img src="" th:if="${album.photos.size()==0}" th:src="@{/img/timg.jpg}"  class="img-responsive center-block" >
+                            </a>
+                            <div class="caption">
+                                <h3>[[${album.name}]]</h3>
+                                <p>[[${album.introduction}]]</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+</body>
+</html>

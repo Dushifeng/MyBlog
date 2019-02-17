@@ -1,0 +1,474 @@
+.main-wrapper {
+    margin-top: 3rem;
+}
+@media (max-width:768px) {
+    .main-wrapper{
+        margin-top: 1rem;
+    }
+}
+.post-wrapper {
+    margin-bottom: 2rem;
+    padding: 15px 15px 0 15px;
+    border: solid 1px #eeeeee;
+    border-radius: .125rem;
+    background-color: #fff;
+    -webkit-box-shadow: 0 0.0625rem 0.125rem rgba(0, 0, 0, .1);
+    -moz-box-shadow: 0 .0625rem .125rem rgba(0, 0, 0, .1);
+    box-shadow: 0 0.0625rem 0.125rem rgba(0, 0, 0, .1);
+}
+
+.post-wrapper .no-thumb-image {
+    width: 100%;
+    height: 100px;
+    background-color: #dfdfdf;
+    position: relative;
+    color: #aaaaaa;
+}
+
+.post-wrapper .no-thumb-image span {
+    position: absolute;;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #aaaaaa;
+}
+
+.post-wrapper .title-link:hover {
+    text-decoration: none;
+}
+
+.post-wrapper h3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: .75rem;
+    white-space: nowrap;
+}
+
+.post-wrapper .post-thumb-image {
+    width: 100%;
+    height: 100px;
+}
+
+.post-wrapper .thumb-wrapper {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    margin: 1.125rem;
+    width: 8rem;
+    /*height: 100px;*/
+}
+
+.post-wrapper .post-content {
+    color: #aaaaaa;
+}
+
+.post-wrapper .row {
+}
+
+.post-meta {
+    margin-top: 2rem;
+    padding: .5rem;
+    border-top: .0625rem solid #f3f3f3;
+    background-color: rgba(0, 0, 0, .01);
+}
+
+.post-meta ul {
+    list-style: none;;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-padding-start: 0px;
+
+}
+
+.post-meta li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 1rem;
+    color: #748594;
+}
+
+.post-meta li a {
+    color: #748594;
+    font-size: 14px;
+}
+
+.post-meta li a:hover {
+    color: #007bff;
+    text-decoration: none;
+}
+
+/*首页样式 end*/
+/**************************************************/
+/**************************************************/
+/*分页样式 start*/
+
+.pagination li a {
+    position: relative;
+    display: block;
+    padding: .5rem .75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+}
+
+.pagination li.active a {
+    z-index: 1;
+    color: #fff;
+    background-color: #467B96;
+    border-color: #007bff;
+}
+.center-pagination .pagination{
+    justify-content: center;
+}
+
+/*分页样式 end*/
+/**************************************************/
+/**************************************************/
+/*边栏 start*/
+
+#secondary .list-group {
+    border-radius: 0;
+}
+
+#secondary .list-group-item:first-child {
+    border-radius: 0;
+}
+
+#secondary .list-group-item {
+    overflow: hidden;;
+    text-overflow: ellipsis;;
+    white-space: nowrap;
+}
+
+#secondary .comment-item {
+    font-size: 14px;
+}
+
+#secondary .list-group-item.list-group-item-info {
+    background-color: #fcfcfc;
+}
+
+.widget {
+    margin-bottom: 2rem;
+}
+
+#secondary .widget {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 10px;
+}
+
+#secondary {
+    margin-top: 1rem;
+}
+
+@media (min-width: 769px) {
+    #secondary {
+        margin-top: 0rem;
+    }
+}
+
+/*边栏 end*/
+/**************************************************/
+/**************************************************/
+/*底部样式 start*/
+#footer {
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+/*底部样式 end*/
+/**************************************************/
+/*单独页面的公共样式 start*/
+.page-header .page-title {
+    letter-spacing: 2px;
+}
+
+.page-header hr {
+    border-top: 2px solid rgba(0, 0, 0, .1);
+    border-radius: 5px;
+    width: 100px;
+}
+
+.page-header .page-title .archive-title {
+    color: #0c5460;;
+}
+
+@media all and (min-width: 769px) {
+    .page-wrapper {
+        /*min-height: 700px;*/
+        margin-top: 2rem;
+    }
+}
+
+.page-content.markdown-body {
+    padding: 40px;
+}
+
+@media screen and (max-width: 768px) {
+    .page-content.markdown-body {
+        padding:15px;
+    }
+}
+
+/*单独页面的公共样式 end*/
+/**************************************************/
+/*文章分类 start*/
+@media all and (min-width: 769px) {
+    .categary-wrapper .categary-content {
+
+    }
+}
+
+.categary-content .categary-item-wrapper {
+    /*padding:0;*/
+    display: inline-block;
+    margin-bottom: 3rem;
+}
+
+.categary-content .categary-item {
+    padding: 15px;
+    text-align: center;
+    border: solid 1px #cccccc;
+}
+
+.categary-content ul, .categary-content li {
+    list-style: none;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0px;
+}
+
+.categary-content .categary-item a {
+    display: block;
+    padding: 2rem;
+
+}
+
+/*文章分类 end*/
+/**************************************************/
+/*单独页面的公共样式 start*/
+.tags-wrapper .tags-list {
+}
+
+.tags-wrapper .tags-list .tag-item {
+    display: inline-block;
+    margin: 5px 0;
+}
+
+@media all and (min-width: 769px) {
+
+}
+
+/*单独页面的公共样式 end*/
+
+/*评论样式 start*/
+.comments-wrapper {
+    border-top: 1px dashed #cccccc;
+    padding-top: 1rem;
+    margin-top: 3rem;
+}
+
+.comments-wrapper img.avatar {
+    text-align: center;
+    margin-right: 10px;
+}
+
+.comments-wrapper .comment-content p {
+    font-size: 14px;
+}
+
+.comment-list, .comment-list li {
+    list-style: none;
+}
+
+.comments-wrapper .comment-author {
+    display: inline-block;
+    font-weight: 600;
+}
+
+.comments-wrapper .comment-meta {
+    display: inline-block;
+}
+
+.comments-wrapper .comment-meta a {
+    color: #cccccc;
+    font-size: 12px;
+}
+
+.comments-wrapper .comment-content {
+    padding-left: 52px;
+}
+
+.comments-wrapper .comment-reply {
+    display: inline-block;
+    float: right;
+    font-size: 12px;
+}
+
+.comments-wrapper .comment-item {
+    border-top: 1px solid #dfdfdf;
+    padding-top: 10px;
+}
+
+.comment-list, .comment-list li {
+    list-style: none;
+}
+
+.comment-children {
+    padding-left: 40px;
+}
+
+.comment-list {
+    padding-left: 0;
+}
+
+.comments-wrapper .pagination {
+    text-align: center;
+    /*display: inline-block;*/
+    justify-content: center;
+}
+
+.comments-wrapper .pagination li a {
+    font-size: 12px;
+}
+
+.comments-wrapper .cancel-comment-reply {
+    margin: 10px 0;
+}
+
+.comment-author .author-after-text {
+    font-size: 12px;
+    color: #0c5;
+}
+
+.add-comments {
+    margin-top: 1rem;
+}
+
+#response {
+    margin: 1rem 0;
+}
+
+@media (min-width: 769px) {
+
+}
+
+/*评论样式 end*/
+
+/*文章样式 start*/
+#post-item {
+    padding-top: 1rem;
+    background-color: #ffffff;
+}
+
+#post-item .post-title {
+    margin: 0;
+    /*text-align: center;*/
+}
+
+#post-item .post-meta {
+    margin-top: 1rem;
+    border: 0;
+    padding: 5px 0;
+    text-align: center;
+}
+
+#post-item .post-keywords {
+    width: 100%;
+    padding: 5px 10px;
+    border: 1px dashed #dfdfdf;
+    margin-top: 2rem;
+    background-color: #fdfdfd;
+}
+
+#post-item .post-keywords a {
+    display: inline-block;
+    margin-left: 5px;
+    padding: 5px;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+
+#post-item .post-keywords a:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+#post-item .post-well {
+    margin-top: 1rem;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#post-item .post-well p {
+    margin: 5px 0;
+}
+
+#post-item .post-near {
+    list-style: none;
+    -webkit-padding-start: 0px;
+    margin-top: 2rem;
+}
+
+/*文章样式 end*/
+/*404样式 start*/
+.search-form .form-control {
+    border-radius: 0;
+}
+
+.search-form .btn {
+    border-radius: 0;
+}
+
+/*404样式 end*/
+/*archive 样式 start*/
+.card.post-wrapper .card-meta {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.card.post-wrapper .card-meta-item {
+    width: 50%;
+    font-size: 12px;
+}
+
+.card.post-wrapper .card-body {
+    width: 100%;
+    padding-bottom: .2rem;
+    padding-top: .4rem;
+    padding-left: .2rem;
+    padding-right: .2rem;
+}
+
+.card.post-wrapper .card-text {
+    height: 100px;
+    padding: .5rem .2rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card.post-wrapper .card-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.card-item {
+    float: left;
+}
+
+/*archive 样式 end*/
+
+

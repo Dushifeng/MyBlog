@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+	<title>杜的个人主页</title>
+
+	<!-- Bootstrap -->
+	<link href="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/index.css" th:href="@{/css/index.css}">
+	<link href="css/custom.css" rel="stylesheet" th:href="@{/css/custom.css}">
+
+
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet">
+	<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+  </head>
+  <body>
+
+  	<!-- 右下角按钮 -->
+  	<!-- <button class="btn btn-default btn_right_bottom">写</button> -->
+  	<!-- 图片轮播 -->
+	<div th:replace="component/bar::carouselbar"></div>
+  	  	<!-- 功能模块 -->
+  	<div class="row div_function">
+
+		<div class="col-xs-4">
+			<div class="panel panel-default" id="pFunc1">
+				<a href="" th:href="@{/articles}">
+					<div class="panel-body">
+						<strong>博客</strong>
+						<img class="iv_function" src="img/blog.svg">
+					</div>
+				</a>
+			</div>
+		</div>
+
+
+  		<div class="col-xs-4">
+  			<div class="panel panel-default"  id="pFunc2">
+				<a href="" th:href="@{/albums}">
+  				<div class="panel-body">
+  					<strong>纪念馆</strong>
+  					<img class="iv_function" src="img/ic_remeber.svg">
+  				</div>
+				</a>
+  			</div>
+  		</div>
+  		<div class="col-xs-4">
+  			<div class="panel panel-default"  id="pFunc3">
+  				<div class="panel-body">
+  					<strong>私人角落</strong>
+  					<img class="iv_function" src="img/ic_personal.svg">
+  				</div>
+  			</div>
+  		</div>
+  	</div>
+  	<!-- 技术日记 -->
+  	<div class="container div_divider" style="font-size:14px">
+  		<!-- 分割线 -->
+  		<hr class="hr_1">希望我能给你一生幸福，让你此生安乐。<hr class="hr_2">
+
+  	</div>
+
+	<div class="container">
+		<ul class="recent-posts" style="width: 100%">
+			<li class="col-sm-4">
+				<div class="border-img">
+					<img src="img/post1.jpg" alt="" />
+				</div>
+			</li>
+			<li class="col-sm-8">
+				<div class="recent-post-desc">
+					<h2>我的她</h2>
+					<p class="post-cat">爱情</p>
+					<div class="clearfix"></div>
+					<p>14年的那个青年节，是我们在一起的日子，研究生楼下鼓起勇气向你表白的一刻仍然历历在目，你选择接纳了一个满是缺点的我，一晃眼，已经5年过去了，这5年的光阴，让我们更了解自己，也更了解彼此，我们是芸芸众生里不起眼的一对，不是全部爱情里最传奇的，也不是凄美的，也不是挥金如土的。但是，我们一直并肩前行，共同成长，让自己变得更好，过去的时光，由衷的谢谢你，能一路陪伴，希望未来的时光，同样一路有你。（づ￣3￣）づ╭❤～</p>
+				</div>
+			</li>
+		</ul>
+		<ul class="recent-posts right-img" style="width: 100%">
+			<li class="col-sm-8 col-lg-8 col-md-8 col-xs-8" >
+				<div class="recent-post-desc">
+					<h2>技术栈</h2>
+					<p class="post-cat">fighting！</p>
+					<div class="clearfix"></div>
+					<p><strong>我会：</strong></p>
+					<p>	熟练使用linux基本操作</p>
+					<p>springboot及javaweb开发</p>
+					<p>前端(jq+bootstrap)</p></p>
+					<p><strong>曾获得：</strong></p>
+					<p>曾获得自治区级ACM大赛三等奖</p>
+				</div>
+			</li>
+			<li class="col-sm-4 col-lg-4 col-md-4 col-xs-4">
+				<div class="border-img">
+					<img src="img/post3.jpg" alt="" />
+				</div>
+			</li>
+		</ul>
+		<ul class="recent-posts" style="width: 100%">
+			<li class="col-sm-4">
+				<div class="border-img">
+					<img src="img/post2.jpg" alt="" />
+				</div>
+			</li>
+			<li class="col-sm-8">
+				<div class="recent-post-desc">
+					<h2>偶像</h2>
+					<p class="post-cat">克里斯保罗</p>
+					<div class="clearfix"></div>
+					<p>
+						“无需匆忙，该来的总会来”
+					</p>
+					<p>
+						你这么努力，那么就让时间来安排吧
+					</p>
+					<p>
+						我们还是会一如既往，
+					</p>
+					<p>
+						见证你一个又一个的巅峰时刻
+					</p>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+  	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  	<script src="js/jquery-3.3.1.min.js"></script>
+  	<!-- Include all compiled plugins (below), or include individual files as needed -->
+  	<script src="js/bootstrap.min.js"></script>
+  	<script src="js/init.js" type="text/script"></script>
+  	<script src="js/util.js"></script>
+  </body>
+  </html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>杜的个人博客</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" type="text/css" href="css/index.css" th:href="@{/css/index.css}">
+    <link rel="stylesheet" type="text/css" href="css/style.css" th:href="@{/css/style.css}">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet">
+    <link href="fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div th:replace="component/bar::blogheader(blog)"></div>
+<div class="container main-wrapper">
+    <div class="row">
+        <div class="col-md-8 col-xs-12 " id="main" role="main">
+
+            <article class="post-wrapper" th:each="article:${articles.getContent()}">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3><a class="title-link"  href="#" th:href="@{/article/}+${article.id}">[[${article.title}]]</a></h3>
+                    </div>
+
+                    <div class="col-md-12">
+                        <!--                   <hr>-->
+                        <div class="post-content" itemprop="articleBody">
+                            [[${article.introduction}]]
+                        </div>
+                    </div>
+                    <div class="col-md-12 post-meta">
+                        <ul class="">
+                            <li>时间： <time>[[${#dates.format(article.createTime, 'yyyy-MM-dd HH:mm')}]]</time></li>
+                            <li>作者： <a href="#" rel="author">杜事峰</a></li>
+                            <li th:if="${article.sortInfos.size() > 0}">分类：
+                                <a href="#" th:each="sort:${article.sortInfos}">[[${sort.name}]]</a>
+                            </li>
+                            <li th:if="${article.sortInfos.size() == 0}">分类：
+                                <a href="#">默认分类</a>
+                            </li>
+                            <li itemprop="interactionCount"><a href="#">[[${article.views}]] 条评论</a></li>
+                            <li class="float-right">
+                                <a href="#" th:href="@{/article/}+${article.id}" class="float-right">阅读全文</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </article>
+            <nav aria-label="Page navigation">
+                <ul class="pagination">
+                    <li th:classappend="${!articles.hasPrevious()}?disabled">
+                        <a href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li th:each="pno:${#numbers.sequence(1,articles.getTotalPages())}" th:classappend="${pno}==${articles.getNumber()}?active ">
+                        <span th:href="@{/articles/}+${articles.getNumber()}">[[${pno}]]</span>
+                    </li>
+                    <li th:classappend="${!articles.hasNext()}?disabled">
+                        <a href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+
+        </div><!-- end #main-->
+
+        <div class="col-md-4 kit-hidden-tb" id="secondary" role="complementary">
+
+
+            <!-- 边栏显示最近文章，默认注释掉 -->
+
+
+            <!-- 边栏显示最近回复，默认开启 -->
+            <section class="widget">
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-info"><span>最近目标</span></li>
+                    <li class="list-group-item comment-item">努力</li>
+                    <li class="list-group-item comment-item">娶你</li>
+                    <li class="list-group-item comment-item">努力娶你</li>
+                </ul>
+            </section>
+
+
+        </div><!-- end #sidebar -->
+
+    </div>
+</div>
+
+
+
+</body>
+</html>
